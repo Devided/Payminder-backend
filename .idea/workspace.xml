@@ -31,10 +31,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="12" selection-start="658" selection-end="658" vertical-scroll-proportion="0.33099297" vertical-offset="0" max-vertical-offset="1950">
+            <state line="22" column="12" selection-start="658" selection-end="658" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="1950">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_10_21_193858_create_payminders_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_21_193858_create_payminders_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="6" selection-start="635" selection-end="635" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_10_21_194241_create_friends_table.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_21_194241_create_friends_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="53" selection-start="534" selection-end="534" vertical-scroll-proportion="0.30832475" vertical-offset="0" max-vertical-offset="973">
               <folding />
             </state>
           </provider>
@@ -58,15 +76,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014_10_21_190327_create_clubs_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_21_190327_create_clubs_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="19" selection-start="544" selection-end="544" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="630">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -82,6 +91,8 @@
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_21_190327_create_clubs_table.php" />
         <option value="$PROJECT_DIR$/.env.local.php" />
         <option value="$PROJECT_DIR$/app/config/database.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_10_21_193858_create_payminders_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_10_21_194241_create_friends_table.php" />
       </list>
     </option>
   </component>
@@ -288,13 +299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_21_190327_create_clubs_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="19" selection-start="544" selection-end="544" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env.local.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="27" selection-start="131" selection-end="131" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="255">
@@ -318,7 +322,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="658" selection-end="658" vertical-scroll-proportion="0.33099297" vertical-offset="0" max-vertical-offset="1950">
+        <state line="22" column="12" selection-start="658" selection-end="658" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="1950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_21_193858_create_payminders_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="6" selection-start="635" selection-end="635" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_21_194241_create_friends_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="53" selection-start="534" selection-end="534" vertical-scroll-proportion="0.30832475" vertical-offset="0" max-vertical-offset="973">
           <folding />
         </state>
       </provider>
