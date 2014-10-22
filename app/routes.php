@@ -11,7 +11,5 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/api/v1/send/{payload}', ['uses' => 'PaymindersController@send', 'as' => 'payminder.send']);
+Route::get('/api/v1/get/{hash}', ['uses' => 'PaymindersController@get', 'as' => 'payminder.get']);
