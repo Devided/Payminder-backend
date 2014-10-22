@@ -28,7 +28,7 @@ class PaymindersController extends \BaseController {
         foreach($input->personList as $friendinput){
             $friend = new Friend();
             $friend->first_name = DB::getPdo()->quote($friendinput->firstname);
-            $friend->last_name = DB::getPdo()->quote($friendinput->firstname);
+            $friend->last_name = DB::getPdo()->quote($friendinput->lastname);
             $friend->payminder_id = $payminder->id;
             $friend->save();
         }
