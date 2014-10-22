@@ -30,7 +30,7 @@ class PaymindersController extends \BaseController {
             $friend->first_name = DB::getPdo()->quote($friendinput->firstname);
             $friend->last_name = DB::getPdo()->quote($friendinput->lastname);
             $friend->payminder_id = $payminder->id;
-            $friend->phonenumber = intval($friendinput->phone);
+            $friend->phonenumber = DB::getPdo()->quote($friendinput->phone);
             $friend->amount = DB::getPdo()->quote($friendinput->amount);
             $friend->save();
         }
