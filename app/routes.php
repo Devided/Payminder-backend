@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/api/v1/send/{payload}', ['uses' => 'PaymindersController@send', 'as' => 'payminder.send']);
-Route::get('/api/v1/get/{hash}', ['uses' => 'PaymindersController@get', 'as' => 'payminder.get']);
+Route::get('/v1/send/{payload}', ['uses' => 'PaymindersController@send', 'as' => 'payminder.send']);
+Route::get('/v1/get/{hash}', ['uses' => 'PaymindersController@get', 'as' => 'payminder.get']);
