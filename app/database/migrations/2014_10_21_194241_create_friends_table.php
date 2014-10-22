@@ -18,9 +18,9 @@ class CreateFriendsTable extends Migration {
             $table->bigInteger('payminder_id')->unsigned();
             $table->string('first_name');
             $table->string('last_name');
-            $table->integer('phonenumber');
+            $table->string('phonenumber');
             $table->string('emailaddress');
-            $table->integer('secondary_phonenumber');
+            $table->string('secondary_phonenumber');
 
             $table->string('amount');
             $table->string('ip_address');
