@@ -15,11 +15,18 @@ class CreateFriendsTable extends Migration {
 		Schema::create('friends', function(Blueprint $table)
 		{
 			$table->increments('id');
+            $table->bigInteger('payminder_id')->unsigned();
             $table->string('first_name');
             $table->string('last_name');
             $table->integer('phonenumber');
             $table->string('emailaddress');
             $table->integer('secondary_phonenumber');
+
+            $table->string('amount');
+            $table->string('ip_address');
+            $table->string('geo');
+            $table->boolean('paid');
+
 			$table->timestamps();
 		});
 	}

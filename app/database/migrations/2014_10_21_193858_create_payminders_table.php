@@ -21,6 +21,8 @@ class CreatePaymindersTable extends Migration {
             $table->integer('end_time');
             $table->string('ip_address');
             $table->string('geo');
+            $table->string('description');
+            $table->string('hash');
 			$table->timestamps();
 		});
 	}
