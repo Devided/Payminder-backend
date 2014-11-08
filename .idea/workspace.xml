@@ -70,7 +70,7 @@
       <file leaf-file-name="PaymindersController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.8712446" vertical-offset="186" max-vertical-offset="885">
+            <state line="50" column="63" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.7854077" vertical-offset="201" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
@@ -583,7 +583,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.8712446" vertical-offset="186" max-vertical-offset="885">
+        <state line="50" column="63" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.7854077" vertical-offset="201" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
