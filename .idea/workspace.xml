@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="12" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="315">
+            <state line="15" column="116" selection-start="706" selection-end="706" vertical-scroll-proportion="0.13119534" vertical-offset="0" max-vertical-offset="686">
               <folding />
             </state>
           </provider>
@@ -34,7 +34,7 @@
       <file leaf-file-name="Payminder.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Payminder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="5" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="210">
+            <state line="7" column="5" selection-start="141" selection-end="141" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymindersController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PaymindersController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="35" selection-start="914" selection-end="914" vertical-scroll-proportion="0.39914164" vertical-offset="141" max-vertical-offset="900">
+            <state line="64" column="5" selection-start="1957" selection-end="1957" vertical-scroll-proportion="-24.75" vertical-offset="366" max-vertical-offset="1080">
               <folding />
             </state>
           </provider>
@@ -115,11 +115,11 @@
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_22_143847_update_payminders_table.php" />
         <option value="$PROJECT_DIR$/app/models/Payminder.php" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_21_193858_create_payminders_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_22_154103_update_friends_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_21_194241_create_friends_table.php" />
         <option value="$PROJECT_DIR$/app/controllers/PaymindersController.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
       </list>
     </option>
   </component>
@@ -541,23 +541,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Payminder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="5" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="3015" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="315">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_21_193858_create_payminders_table.php">
@@ -581,9 +567,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Payminder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="5" selection-start="141" selection-end="141" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="35" selection-start="914" selection-end="914" vertical-scroll-proportion="0.39914164" vertical-offset="141" max-vertical-offset="900">
+        <state line="64" column="5" selection-start="1957" selection-end="1957" vertical-scroll-proportion="-24.75" vertical-offset="366" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="116" selection-start="706" selection-end="706" vertical-scroll-proportion="0.13119534" vertical-offset="0" max-vertical-offset="686">
           <folding />
         </state>
       </provider>
