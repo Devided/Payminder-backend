@@ -22,7 +22,7 @@ class PaymindersController extends \BaseController {
         $payminder->description = DB::getPdo()->quote($input->description_p);
         $payminder->save();
 
-        $payminder->hash = Hash::make($payminder->id);
+        $payminder->hash = Hash::make($payminder->id . microtime());
         $payminder->save();
 
         foreach($input->personList as $friendinput){
