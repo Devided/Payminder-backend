@@ -20,6 +20,6 @@ class Friend extends \Eloquent {
             $number = "31" . $number;
         }
 
-        return $number . "<br>";
+        return $number;
     }
 }
