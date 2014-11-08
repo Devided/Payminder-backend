@@ -63,6 +63,6 @@ class PaymindersController extends \BaseController {
         $dbhash = base64_decode($hash);
 
         $payminder = Payminder::where('hash','=',$dbhash);
-        return Friend::where('payminder_id','=',$payminder->id)->get();
+        return Friend::where('payminder_id','=',($payminder->id))->get();
     }
 }
