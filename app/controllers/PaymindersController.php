@@ -47,7 +47,7 @@ class PaymindersController extends \BaseController {
 	 */
 	public function get($hash)
 	{
-		return Payminder::findByHash($hash);
+		return Payminder::where('hash', '=', $hash)->first();
 	}
 
 }
