@@ -65,4 +65,9 @@ class PaymindersController extends \BaseController {
         $payminder = Payminder::where('hash','=',$dbhash)->first();
         return Friend::where('payminder_id','=',$payminder->id)->get();
     }
+
+    public function test()
+    {
+        return Friend::all()->number();
+    }
 }
