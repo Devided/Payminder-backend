@@ -38,16 +38,26 @@
    {{ $payminder->description }}
 </h2>
 <p>
-    Datum: {{ $payminder->sendTime }}
+    Datum: {{ $payminder->end_time }}
 </p>
 <p>
-
+    <hr>
 </p>
 <p>
     Wie heeft er betaald?
+    <ul>
+        @foreach($friendspaid as $friend)
+        <li>{{ $friend->first_name }}</li>
+        @endforeach
+    </ul>
 </p>
 <p>
     Wie heeft er niet betaald?
+    <ul>
+        @foreach($friendsnotpaid as $friend)
+        <li>{{ $friend->first_name }}</li>
+        @endforeach
+    </ul>
 </p>
 </body>
 </html>
