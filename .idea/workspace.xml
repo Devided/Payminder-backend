@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymindersController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PaymindersController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="48" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.79514414" vertical-offset="1216" max-vertical-offset="1905">
+            <state line="116" column="48" selection-start="3717" selection-end="3717" vertical-scroll-proportion="-10.274509" vertical-offset="1216" max-vertical-offset="1905">
               <folding />
             </state>
           </provider>
@@ -69,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="6" selection-start="750" selection-end="750" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="705">
+            <state line="49" column="30" selection-start="907" selection-end="907" vertical-scroll-proportion="0.8927039" vertical-offset="111" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -139,9 +139,9 @@
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/models/Friend.php" />
         <option value="$PROJECT_DIR$/app/controllers/FriendsController.php" />
-        <option value="$PROJECT_DIR$/app/views/show.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/PaymindersController.php" />
+        <option value="$PROJECT_DIR$/app/views/show.blade.php" />
       </list>
     </option>
   </component>
@@ -677,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="6" selection-start="750" selection-end="750" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="71" selection-start="870" selection-end="870" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
@@ -693,7 +686,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="48" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.79514414" vertical-offset="1216" max-vertical-offset="1905">
+        <state line="116" column="48" selection-start="3717" selection-end="3717" vertical-scroll-proportion="-10.274509" vertical-offset="1216" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="30" selection-start="907" selection-end="907" vertical-scroll-proportion="0.8927039" vertical-offset="111" max-vertical-offset="885">
           <folding />
         </state>
       </provider>

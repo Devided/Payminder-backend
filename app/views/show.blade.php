@@ -9,7 +9,7 @@
         body {
             margin:0;
             font-family:'Lato', sans-serif;
-            text-align:center;
+            text-align:left;
             color: #000;
         }
 
@@ -35,7 +35,19 @@
 </head>
 <body>
 <h2>
-    {{
+   {{ $payminder->description }}
 </h2>
+<p>
+    Datum: {{ $payminder->sendTime }}
+</p>
+<p>
+
+</p>
+<p>
+    Wie heeft er betaald?
+</p>
+<p>
+    Wie heeft er niet betaald?
+</p>
 </body>
 </html>
