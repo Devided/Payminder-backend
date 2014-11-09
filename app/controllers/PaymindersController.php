@@ -48,7 +48,13 @@ class PaymindersController extends \BaseController {
                 $friend->amount = $friendinput->amount;
                 $friend->save();
 
-                $text = urlencode("Hoi " . $friend->first_name . ", je moet nog " . $friend->amount . " euro betalen aan je vriend " . $payminder->sender_name . ". Al betaald? klik hier: api.payminder.nl/c/".$friend->id." Groetjes, Bill Cashback");
+                $reknr = " ";
+                if($payminder->sender_iban != "")
+                {
+                    $reknr = " (".$payminder->sender_iban.")";
+                }
+
+                $text = urlencode("Hoi " . $friend->first_name . ", je moet nog " . $friend->amount . " euro betalen aan je vriend " . $payminder->sender_name . ". Al betaald? klik hier: api.payminder.nl/c/".$friend->id." Groetjes, Bill Cashback" . $reknr);
                 $to = $friend->number();
 
                 $sess_id = trim($sess[1]); // remove any whitespace
