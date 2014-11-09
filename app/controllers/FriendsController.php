@@ -6,7 +6,7 @@
  * Time: 14:08
  */
 
-class PaymindersController extends \BaseController {
+class FriendsController extends \BaseController {
 
     public function setPayed($id)
     {
