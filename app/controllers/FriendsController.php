@@ -17,6 +17,6 @@ class FriendsController extends \BaseController {
         echo "<br>";
         echo "<br>";
         echo "<br>";
-        echo "<center><h3>Super, je hebt betaald!</h3></center>";
+        echo "<center><h2>Super, je hebt betaald!</h2></center>";
     }
 }
