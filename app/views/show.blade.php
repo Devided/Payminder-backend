@@ -7,7 +7,7 @@
         @import url(//fonts.googleapis.com/css?family=Lato:700);
 
         body {
-            margin:0;
+            margin:20px;
             font-family:'Lato', sans-serif;
             text-align:left;
             color: #000;
@@ -38,7 +38,7 @@
    {{ $payminder->description }}
 </h2>
 <p>
-    Datum: {{ $payminder->end_time }}
+    Datum: {{ date('d/m/y', $payminder->end_time); }}
 </p>
 <p>
     <hr>
