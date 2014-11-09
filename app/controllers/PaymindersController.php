@@ -25,14 +25,47 @@ class PaymindersController extends \BaseController {
         $payminder->hash = Hash::make($payminder->id . microtime());
         $payminder->save();
 
-        foreach($input->personList as $friendinput){
-            $friend = new Friend();
-            $friend->first_name = DB::getPdo()->quote($friendinput->firstname);
-            $friend->last_name = DB::getPdo()->quote($friendinput->lastname);
-            $friend->payminder_id = $payminder->id;
-            $friend->phonenumber = DB::getPdo()->quote($friendinput->phone);
-            $friend->amount = DB::getPdo()->quote($friendinput->amount);
-            $friend->save();
+
+        // MASK: SEND PAYMINDERS
+        $user = "payminder";
+        $password = "BEtYHsR1";
+        $api_id = "3503724";
+        $baseurl ="http://api.clickatell.com";
+        // auth call
+        $url = "$baseurl/http/auth?user=$user&password=$password&api_id=$api_id";
+        // do auth call
+        $ret = file($url);
+        // explode our response. return string is on first line of the data returned
+        $sess = explode(":",$ret[0]);
+        if ($sess[0] == "OK") {
+            foreach($input->personList as $friendinput)
+            {
+                $friend = new Friend();
+                $friend->first_name = DB::getPdo()->quote($friendinput->firstname);
+                $friend->last_name = DB::getPdo()->quote($friendinput->lastname);
+                $friend->payminder_id = $payminder->id;
+                $friend->phonenumber = DB::getPdo()->quote($friendinput->phone);
+                $friend->amount = DB::getPdo()->quote($friendinput->amount);
+                $friend->save();
+
+                $text = urlencode("Hallo, " . $friend->first_name . "!");
+                $to = $friend->number();
+
+                $sess_id = trim($sess[1]); // remove any whitespace
+                $url = "$baseurl/http/sendmsg?session_id=$sess_id&to=$to&text=$text";
+
+                // do sendmsg call
+                $ret = file($url);
+                $send = explode(":",$ret[0]);
+
+                if ($send[0] == "ID") {
+                    echo "successnmessage ID: ". $send[1];
+                } else {
+                    echo "send message failed";
+                }
+            }
+        } else {
+            echo "Authentication failure: ". $ret[0];
         }
 
 		return base64_encode($payminder->hash);
