@@ -79,7 +79,7 @@
       <file leaf-file-name="FriendsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/FriendsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="23" selection-start="109" selection-end="109" vertical-scroll-proportion="0.17777778" vertical-offset="0" max-vertical-offset="675">
+            <state line="21" column="1" selection-start="507" selection-end="507" vertical-scroll-proportion="0.5088853" vertical-offset="0" max-vertical-offset="619">
               <folding>
                 <element signature="e#6#84#0" expanded="true" />
               </folding>
@@ -676,7 +676,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/FriendsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="109" selection-end="109" vertical-scroll-proportion="0.17777778" vertical-offset="0" max-vertical-offset="675">
+        <state line="21" column="1" selection-start="507" selection-end="507" vertical-scroll-proportion="0.5088853" vertical-offset="0" max-vertical-offset="619">
           <folding>
             <element signature="e#6#84#0" expanded="true" />
           </folding>
