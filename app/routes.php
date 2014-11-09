@@ -15,3 +15,4 @@ Route::get('/v1/send/{payload}', ['uses' => 'PaymindersController@send', 'as' =>
 Route::get('/v1/get/{hash}', ['uses' => 'PaymindersController@get', 'as' => 'payminder.get']);
 Route::get('/v1/get/{hash}/friends', ['uses' => 'PaymindersController@getFriends', 'as' => 'payminder.getFriends']);
 Route::get('/c/{id}', ['uses' => 'FriendsController@setPayed', 'as' => 'friend.setpayed']);
+Route::get('/v1/view/{hash}', ['uses' => 'PaymindersController@show']);

@@ -110,4 +110,12 @@ class PaymindersController extends \BaseController {
         $friend = Friend::find($id);
         return $friend->number();
     }
+
+    public function show($hash)
+    {
+        $payminder = Payminder::where('hash', '=',base64_decode($hash))->first();
+        $friends = Friend::where('payminder_id', '=', $payminder->id)->get();
+
+        return View::make('show')->with(['payminder' => $payminder, 'friends' => $friends]);
+    }
 }
