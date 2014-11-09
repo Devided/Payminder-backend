@@ -49,6 +49,9 @@
         @foreach($friendspaid as $friend)
         <li>{{ $friend->first_name }}</li>
         @endforeach
+        @if($friendspaid.isEmpty())
+        <li>Nog niemand heeft betaald</li>
+        @endif
     </ul>
 </p>
 <p>
@@ -57,6 +60,9 @@
         @foreach($friendsnotpaid as $friend)
         <li>{{ $friend->first_name }}</li>
         @endforeach
+        @if($friendsnotpaid.isEmpty())
+        <li>Fantastisch! Iedereen heeft betaald</li>
+        @endif
     </ul>
 </p>
 </body>
