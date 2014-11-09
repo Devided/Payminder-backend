@@ -59,7 +59,7 @@ class PaymindersController extends \BaseController {
                 $send = explode(":",$ret[0]);
 
                 if ($send[0] == "ID") {
-                    echo "successnmessage ID: ". $send[1];
+                    //echo "successnmessage ID: ". $send[1];
                 } else {
                     echo "send message failed";
                 }
