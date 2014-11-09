@@ -14,6 +14,4 @@
 Route::get('/v1/send/{payload}', ['uses' => 'PaymindersController@send', 'as' => 'payminder.send']);
 Route::get('/v1/get/{hash}', ['uses' => 'PaymindersController@get', 'as' => 'payminder.get']);
 Route::get('/v1/get/{hash}/friends', ['uses' => 'PaymindersController@getFriends', 'as' => 'payminder.getFriends']);
-
-
-Route::get('/test/{id}', ['uses' => 'PaymindersController@test']);
+Route::get('/c/{id}', ['uses' => 'FriendsController@setPayed', 'as' => 'friend.setpayed']);
