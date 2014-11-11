@@ -42,7 +42,9 @@
 </p>
 <p>
     @foreach($friends as $friend)
-    <li><span style="text-align: left">{{ $friend->first_name }} {{ $friend->last_name }}</span><span style="text-align:right">bedrag €{{ $friend->amount }}</span></li>
+    <div style="width:100%; height:100px; background:#bcd42a; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align: middle;">
+        <span style="text-align: left; margin-left: 20px;">{{ $friend->first_name }} {{ $friend->last_name }}</span><span style="text-align:right">bedrag €{{ $friend->amount }}</span>
+    </div>
     @endforeach
 </p>
 </body>
