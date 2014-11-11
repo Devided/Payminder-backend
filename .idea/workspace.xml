@@ -70,12 +70,12 @@
       <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="54" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.75" vertical-offset="0" max-vertical-offset="960">
+            <state line="49" column="165" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.765625" vertical-offset="0" max-vertical-offset="960">
               <folding>
                 <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1415730595000" expanded="true" signature="1361:1389" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -412,8 +412,8 @@
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1415730595000" expanded="true" signature="1361:1389" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -724,12 +724,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="54" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.75" vertical-offset="0" max-vertical-offset="960">
+        <state line="49" column="165" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.765625" vertical-offset="0" max-vertical-offset="960">
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1415730595000" expanded="true" signature="1361:1389" placeholder="..." />
           </folding>
         </state>
       </provider>
