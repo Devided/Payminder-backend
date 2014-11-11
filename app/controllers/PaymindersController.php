@@ -48,13 +48,28 @@ class PaymindersController extends \BaseController {
                 $friend->amount = $friendinput->amount;
                 $friend->save();
 
-                $reknr = " ";
-                if($payminder->sender_iban != "")
+                $msg = "";
+                if($payminder->description == "" && $friend->amount == "")
                 {
-                    $reknr = " (".$payminder->sender_iban.")";
+                    $msg = "";
+                } else if($payminder->description == "" && $friend->amount != "")
+                {
+                    $msg = "(" . $payminder->description . ")";
+                } else if($payminder->description != "" && $friend->amount == "")
+                {
+                    $msg = "(" . $friend->amount . " euro)";
+                } else {
+                    $msg = "(" . $friend->amount . " euro, ".$payminder->description.")";
                 }
 
-                $text = urlencode("Hoi " . $friend->first_name . ", je moet nog " . $friend->amount . " euro betalen aan je vriend " . $payminder->sender_name . ". Al betaald? klik hier: api.payminder.nl/c/".$friend->id." Groetjes, Bill Cashback" . $reknr);
+                $reknr = "";
+                if($payminder->sender_iban != ""){
+                    $reknr = ". Het rekeningnummer is " . $payminder->sender_iban . "";
+                }
+
+                $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten " . $msg . $reknr . ". Heb jij al betaald? Klik hier: api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je snel weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden herinneren aan betalingen?\nDownload Payminder: payminder.nl";
+
+                $text = url_encode($message);
                 $to = $friend->number();
 
                 $sess_id = trim($sess[1]); // remove any whitespace
