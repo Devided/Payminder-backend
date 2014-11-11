@@ -46,7 +46,7 @@
 </p>
 <p>
     @foreach($friends as $friend)
-    @if($friend->paid == 1)
+    @if($friend->paid())
     <div style="width:100%; height:60px; background:#67ff6e; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align: middle; margin-top:1px; padding-top:35px;">
         <span style="text-align: left; margin-left: 20px; margin-top:20px;">{{ $friend->first_name }} {{ $friend->last_name }}</span><span style="position:absolute; text-align:right; right:0px; margin-right:20px;">bedrag €{{ $friend->amount }}</span>
     </div>

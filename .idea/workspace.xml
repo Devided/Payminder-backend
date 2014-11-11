@@ -31,10 +31,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Friend.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Friend.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="1" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="450">
+            <state line="37" column="1" selection-start="746" selection-end="746" vertical-scroll-proportion="0.57040083" vertical-offset="0" max-vertical-offset="973">
               <folding />
             </state>
           </provider>
@@ -67,14 +67,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="62" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.734375" vertical-offset="45" max-vertical-offset="1005">
+            <state line="48" column="23" selection-start="1079" selection-end="1079" vertical-scroll-proportion="-28.125" vertical-offset="45" max-vertical-offset="1005">
               <folding>
                 <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -143,11 +144,11 @@
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_22_154103_update_friends_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_21_194241_create_friends_table.php" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/app/models/Friend.php" />
         <option value="$PROJECT_DIR$/app/controllers/FriendsController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/PaymindersController.php" />
         <option value="$PROJECT_DIR$/app/views/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/Friend.php" />
       </list>
     </option>
   </component>
@@ -416,6 +417,7 @@
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -679,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="1" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/hello.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="12" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="720">
@@ -730,16 +725,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="62" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.734375" vertical-offset="45" max-vertical-offset="1005">
+        <state line="48" column="23" selection-start="1079" selection-end="1079" vertical-scroll-proportion="-28.125" vertical-offset="45" max-vertical-offset="1005">
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="1" selection-start="746" selection-end="746" vertical-scroll-proportion="0.57040083" vertical-offset="0" max-vertical-offset="973">
+          <folding />
         </state>
       </provider>
     </entry>

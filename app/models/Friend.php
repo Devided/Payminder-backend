@@ -22,4 +22,17 @@ class Friend extends \Eloquent {
 
         return $number;
     }
+
+    public function paid()
+    {
+        if($this->paid == 1)
+        {
+            return true;
+        }
+        elseif($this->paid == 0)
+        {
+            return false;
+        }
+
+    }
 }
