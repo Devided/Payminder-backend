@@ -41,11 +41,9 @@
     <hr>
 </p>
 <p>
-    <ul>
-        @foreach($friends as $friend)
-        <li>{{ $friend->first_name }}</li>
-        @endforeach
-    </ul>
+    @foreach($friends as $friend)
+    <li><span style="text-align: left">{{ $friend->first_name }} {{ $friend->last_name }}</span><span style="text-align:right">bedrag €{{ $friend->amount }}</span></li>
+    @endforeach
 </p>
 </body>
 </html>
