@@ -129,9 +129,8 @@ class PaymindersController extends \BaseController {
     public function show($hash)
     {
         $payminder = Payminder::where('hash', '=',base64_decode($hash))->first();
-        $friendspaid = Friend::where('payminder_id', '=', $payminder->id)->where('paid','=','1')->get();
-        $friendsnotpaid = Friend::where('payminder_id', '=', $payminder->id)->where('paid','=','0')->get();
+        $friends = Friend::where('payminder_id', '=', $payminder->id)->get();
 
-        return View::make('show')->with(['payminder' => $payminder, 'friendspaid' => $friendspaid, 'friendsnotpaid' => $friendsnotpaid]);
+        return View::make('show')->with(['payminder' => $payminder, 'friends' => $friends]);
     }
 }

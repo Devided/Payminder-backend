@@ -34,35 +34,17 @@
     </style>
 </head>
 <body>
-<h2>
-   {{ $payminder->description }}
-</h2>
-<p>
+<p style="text-align: center">
     Datum: {{ date('d/m/y', $payminder->end_time); }}
 </p>
 <p>
     <hr>
 </p>
 <p>
-    Wie heeft er betaald?
     <ul>
-        @foreach($friendspaid as $friend)
+        @foreach($friends as $friend)
         <li>{{ $friend->first_name }}</li>
         @endforeach
-        @if($friendspaid->isEmpty())
-        <li>Nog niemand heeft betaald</li>
-        @endif
-    </ul>
-</p>
-<p>
-    Wie heeft er niet betaald?
-    <ul>
-        @foreach($friendsnotpaid as $friend)
-        <li>{{ $friend->first_name }}</li>
-        @endforeach
-        @if($friendsnotpaid->isEmpty())
-        <li>Fantastisch! Iedereen heeft betaald</li>
-        @endif
     </ul>
 </p>
 </body>
