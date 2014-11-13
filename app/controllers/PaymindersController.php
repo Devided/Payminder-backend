@@ -16,6 +16,7 @@ class PaymindersController extends \BaseController {
         $payminder = new Payminder();
         $payminder->sender_name = $input->sender;
         $payminder->sender_iban = $input->iban;
+        $payminder->pushID = $input->pushNotificationID;
         $payminder->start_time = intval($input->startTime);
         $payminder->end_time = intval($input->sendTime);
         $payminder->ip_address = Request::getClientIp();
