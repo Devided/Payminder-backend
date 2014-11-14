@@ -23,7 +23,7 @@ class FriendsController extends \BaseController {
         $alert = $friend->first_name . ' heeft betaald!';
 
         $body = [];
-        $body['aps'] = ['alert' => $alert];
+        $body['aps'] = ['alert' => $alert, 'sound' => 'default'];
 
         $cert = '/home/forge/api.payminder.nl/app/controllers/pushcertdev.pem';
 
