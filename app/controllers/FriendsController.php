@@ -15,7 +15,7 @@ class FriendsController extends \BaseController {
         $friend->paid = true;
         $friend->save();
 
-        /*// send push notification to origin sender
+        // send push notification to origin sender
         $deviceToken = $friend->payminder()->pushID;
         $alert = $friend->first_name . ' heeft betaald!';
 
@@ -35,7 +35,7 @@ class FriendsController extends \BaseController {
         $message = chr( 0 ) . pack( 'n', 32 ) . pack( 'H*', $deviceToken ) . pack( 'n', strlen($payload ) ) . $payload;
 
         fwrite( $fp, $message );
-        fclose( $fp );*/
+        fclose( $fp );
 
         echo "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head>";
         echo "<br>";
