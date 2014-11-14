@@ -20,7 +20,16 @@ class FriendsController extends \BaseController {
 
         // send push notification to origin sender
         $deviceToken = $payminder->pushID;
-        $alert = $friend->first_name . ' heeft betaald!';
+	$alert = "";
+	if($friend->amount == "0" && $payminder->description == ""){
+	        $alert = $friend->first_name . ' heeft betaald!';
+	} else if($friend->amount != "0" && $payminder->description == ""){
+		$alert = $friend->first_name . ' heeft €' . $friend->amount . ' betaald!';
+	} else if($friend->amount != "0" && $payminder->description != ""){
+		$alert = $friend->first_name . ' heeft betaald voor lijstje "' . $payminder->description . '"!';
+	} else {
+		$alert = $friend->first_name . ' heeft €' . $friend->amount . ' betaald voor lijstje "' . $payminder->description . '"!';
+	}
 
         $body = [];
         $body['aps'] = ['alert' => $alert, 'sound' => 'default'];
