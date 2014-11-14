@@ -14,9 +14,12 @@ class FriendsController extends \BaseController {
         $friend = Friend::find($id);
         $friend->paid = true;
         $friend->save();
+	
+	// get payminder
+	$payminder = Payminder::find($friend->payminder_id);
 
         // send push notification to origin sender
-        $deviceToken = $friend->payminder()->pushID;
+        $deviceToken = $payminder->pushID;
         $alert = $friend->first_name . ' heeft betaald!';
 
         $body = [];
