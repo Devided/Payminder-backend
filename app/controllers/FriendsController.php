@@ -25,7 +25,7 @@ class FriendsController extends \BaseController {
         $body = [];
         $body['aps'] = ['alert' => $alert];
 
-        $cert = 'pushcertdev.pem';
+        $cert = '/home/forge/api.payminder.nl/app/controllers/pushcertdev.pem';
 
         $url = 'ssl://gateway.sandbox.push.apple.com:2195';
         //$url = 'ssl://gateway.push.apple.com:2195';
