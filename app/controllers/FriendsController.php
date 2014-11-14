@@ -25,7 +25,7 @@ class FriendsController extends \BaseController {
         $body = [];
         $body['aps'] = ['alert' => $alert];
 
-        $cert = '../storage/pushcertdev.pem';
+        $cert = 'pushcertdev.pem';
 
         $url = 'ssl://gateway.sandbox.push.apple.com:2195';
         //$url = 'ssl://gateway.push.apple.com:2195';
