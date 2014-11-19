@@ -83,11 +83,11 @@ class PaymindersController extends \BaseController {
                 if ($send[0] == "ID") {
                     //echo "successnmessage ID: ". $send[1];
                 } else {
-                    echo "send message failed";
+                    //echo "send message failed";
                 }
             }
         } else {
-            echo "Authentication failure: ". $ret[0];
+            //echo "Authentication failure: ". $ret[0];
         }
 
 		return base64_encode($payminder->hash);
