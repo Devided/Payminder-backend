@@ -16,3 +16,7 @@ Route::get('/v1/get/{hash}', ['uses' => 'PaymindersController@get', 'as' => 'pay
 Route::get('/v1/get/{hash}/friends', ['uses' => 'PaymindersController@getFriends', 'as' => 'payminder.getFriends']);
 Route::get('/c/{id}', ['uses' => 'FriendsController@setPayed', 'as' => 'friend.setpayed']);
 Route::get('/v1/view/{hash}', ['uses' => 'PaymindersController@show']);
+
+Route::post('/iron/recieve', function(){
+   return Queue::marshal();
+});

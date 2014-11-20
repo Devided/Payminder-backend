@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sync',
+	'default' => 'iron',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -51,10 +51,10 @@ return array(
 
 		'iron' => array(
 			'driver'  => 'iron',
-			'host'    => 'mq-aws-us-east-1.iron.io',
-			'token'   => 'your-token',
-			'project' => 'your-project-id',
-			'queue'   => 'your-queue-name',
+			'host'    => 'mq-aws-eu-west-1.iron.io',
+			'token'   => 'jN1O6AO1qkWO6dUTNcwyOLLunsI',
+			'project' => '546ddd0441bb3f00050000a2',
+			'queue'   => 'sendFriendSMS',
 			'encrypt' => true,
 		),
 

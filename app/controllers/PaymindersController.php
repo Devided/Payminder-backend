@@ -49,42 +49,7 @@ class PaymindersController extends \BaseController {
                 $friend->amount = $friendinput->amount;
                 $friend->save();
 
-                $msg = "";
-                if($payminder->description == "" && $friend->amount == "0")
-                {
-                    $msg = "";
-                } else if($payminder->description == "" && $friend->amount != "0")
-                {
-                    $msg = " (" . $payminder->description . ")";
-                } else if($payminder->description != "" && $friend->amount == "0")
-                {
-                    $msg = " (" . $friend->amount . " euro)";
-                } else {
-                    $msg = " (" . $friend->amount . " euro, ".$payminder->description.")";
-                }
-
-                $reknr = "";
-                if($payminder->sender_iban != ""){
-                    $reknr = ". Het rekeningnummer is " . $payminder->sender_iban . "";
-                }
-
-                $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je morgen weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden automatisch herinneren?\nDownload Payminder: bit.ly/10ZNepH";
-
-                $text = urlencode($message);
-                $to = $friend->number();
-
-                $sess_id = trim($sess[1]); // remove any whitespace
-                $url = "$baseurl/http/sendmsg?session_id=$sess_id&to=$to&text=$text&from=Payminder";
-
-                // do sendmsg call
-                $ret = file($url);
-                $send = explode(":",$ret[0]);
-
-                if ($send[0] == "ID") {
-                    //echo "successnmessage ID: ". $send[1];
-                } else {
-                    //echo "send message failed";
-                }
+                Event::fire('sendSMS', [$friend->id]);
             }
         } else {
             //echo "Authentication failure: ". $ret[0];
