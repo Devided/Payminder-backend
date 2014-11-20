@@ -50,13 +50,13 @@ class PaymindersController extends \BaseController {
                 $friend->save();
 
                 $msg = "";
-                if($payminder->description == "" && $friend->amount == "")
+                if($payminder->description == "" && $friend->amount == "0")
                 {
                     $msg = "";
-                } else if($payminder->description == "" && $friend->amount != "")
+                } else if($payminder->description == "" && $friend->amount != "0")
                 {
                     $msg = "(" . $payminder->description . ")";
-                } else if($payminder->description != "" && $friend->amount == "")
+                } else if($payminder->description != "" && $friend->amount == "0")
                 {
                     $msg = "(" . $friend->amount . " euro)";
                 } else {
