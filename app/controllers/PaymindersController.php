@@ -68,7 +68,7 @@ class PaymindersController extends \BaseController {
                     $reknr = ". Het rekeningnummer is " . $payminder->sender_iban . "";
                 }
 
-                $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je snel weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden herinneren aan betalingen?\nDownload Payminder: bit.ly/10ZNepH";
+                $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je morgen weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden herinneren aan betalingen?\nDownload Payminder: bit.ly/10ZNepH";
 
                 $text = urlencode($message);
                 $to = $friend->number();
