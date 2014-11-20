@@ -34,9 +34,10 @@ class FriendsController extends \BaseController {
         	$body['aps'] = ['alert' => $alert, 'sound' => 'default'];
 
         	$cert = '/home/forge/api.payminder.nl/app/controllers/pushcertdev.pem';
+		$cert = '/home/forge/api.payminder.nl/app/controllers/pushcertprod.pem';
 
         	$url = 'ssl://gateway.sandbox.push.apple.com:2195';
-        	//$url = 'ssl://gateway.push.apple.com:2195';
+        	$url = 'ssl://gateway.push.apple.com:2195';
 
         	$context = stream_context_create();
         	stream_context_set_option( $context, 'ssl', 'local_cert', $cert );
