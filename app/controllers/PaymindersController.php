@@ -74,7 +74,7 @@ class PaymindersController extends \BaseController {
                 $to = $friend->number();
 
                 $sess_id = trim($sess[1]); // remove any whitespace
-                $url = "$baseurl/http/sendmsg?session_id=$sess_id&to=$to&text=$text";
+                $url = "$baseurl/http/sendmsg?session_id=$sess_id&to=$to&text=$text&from=Payminder";
 
                 // do sendmsg call
                 $ret = file($url);
