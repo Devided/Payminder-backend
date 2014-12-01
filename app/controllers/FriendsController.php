@@ -8,7 +8,7 @@
 
 class FriendsController extends \BaseController {
 
-    public function setPayed($id)
+    public function setPaid($id)
     {
         // mark friend as payed
         $friend = Friend::find($id);
@@ -50,14 +50,20 @@ class FriendsController extends \BaseController {
         	fwrite( $fp, $message );
         	fclose( $fp );
 
-		$friend->paid = true;
-		$friend->save();
-	}
+		    $friend->paid = true;
+		    $friend->save();
+        }
 
-        echo "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head>";
-        echo "<br>";
-        echo "<br>";
-        echo "<br>";
-        echo "<center><h2>Super, je hebt betaald!</h2></center>";
+        return View::make('paid')->with(['id' => $id]);
+    }
+
+    public function setNotPaid($id)
+    {
+        // mark friend as payed
+        $friend = Friend::find($id);
+        $friend->paid = 0;
+        $friend->save();
+
+        return View::make('notpaid')->with(['id' => $id]);
     }
 }

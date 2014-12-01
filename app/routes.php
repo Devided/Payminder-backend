@@ -14,7 +14,8 @@
 Route::get('/v1/send/{payload}', ['uses' => 'PaymindersController@send', 'as' => 'payminder.send']);
 Route::get('/v1/get/{hash}', ['uses' => 'PaymindersController@get', 'as' => 'payminder.get']);
 Route::get('/v1/get/{hash}/friends', ['uses' => 'PaymindersController@getFriends', 'as' => 'payminder.getFriends']);
-Route::get('/c/{id}', ['uses' => 'FriendsController@setPayed', 'as' => 'friend.setpayed']);
+Route::get('/c/{id}', ['uses' => 'FriendsController@setPaid', 'as' => 'friend.setpaid']);
+Route::get('/u/{id}', ['uses' => 'FriendsController@setNotPaid', 'as' => 'friend.setnotpaid']);
 Route::get('/v1/view/{hash}', ['uses' => 'PaymindersController@show']);
 
 Route::post('/iron/recieve', function(){
