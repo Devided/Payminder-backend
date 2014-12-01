@@ -5,8 +5,8 @@
     <br><h2 style="color: white">Super, je hebt betaald!</h2>
     <br>
     <br><a href="{{ action('friend.setnotpaid', [$id]) }}">Toch niet betaald? Klik hier</a>
-    <hr>
-        <br><br><br>
+        <br><br><br><br><br>
+        <hr>
         <a href="https://www.facebook.com/pages/Payminder/712891918796289">Facebook</a>
     </center>
 </body>
