@@ -6,6 +6,7 @@
     <br>
     <br><a href="{{ action('friend.setnotpaid', [$id]) }}">Toch niet betaald? Klik hier</a>
     <hr>
-        <a href="http://fb.com/payminder">Facebook</a>
+        <br><br><br>
+        <a href="https://www.facebook.com/pages/Payminder/712891918796289">Facebook</a>
     </center>
 </body>

@@ -91,7 +91,7 @@
       <file leaf-file-name="paid.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/paid.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="7" selection-start="460" selection-end="460" vertical-scroll-proportion="0.15416238" vertical-offset="0" max-vertical-offset="973">
+            <state line="9" column="73" selection-start="478" selection-end="478" vertical-scroll-proportion="0.13874614" vertical-offset="0" max-vertical-offset="973">
               <folding>
                 <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#center#0;n#body#0;n#!!top" expanded="true" />
@@ -726,7 +726,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/paid.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="460" selection-end="460" vertical-scroll-proportion="0.15416238" vertical-offset="0" max-vertical-offset="973">
+        <state line="9" column="73" selection-start="478" selection-end="478" vertical-scroll-proportion="0.13874614" vertical-offset="0" max-vertical-offset="973">
           <folding>
             <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#center#0;n#body#0;n#!!top" expanded="true" />
