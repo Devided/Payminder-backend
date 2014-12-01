@@ -91,7 +91,7 @@
       <file leaf-file-name="paid.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/paid.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="7" selection-start="391" selection-end="391" vertical-scroll-proportion="0.107913665" vertical-offset="0" max-vertical-offset="973">
+            <state line="10" column="7" selection-start="460" selection-end="460" vertical-scroll-proportion="0.15416238" vertical-offset="0" max-vertical-offset="973">
               <folding>
                 <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#center#0;n#body#0;n#!!top" expanded="true" />
@@ -113,8 +113,12 @@
       <file leaf-file-name="notpaid.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/notpaid.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="62" selection-start="144" selection-end="144" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="105">
-              <folding />
+            <state line="6" column="7" selection-start="288" selection-end="288" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="180">
+              <folding>
+                <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#center#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#center#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -711,14 +715,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/notpaid.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="62" selection-start="144" selection-end="144" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="105">
-          <folding />
+        <state line="6" column="7" selection-start="288" selection-end="288" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="180">
+          <folding>
+            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#center#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#center#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/paid.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="391" selection-end="391" vertical-scroll-proportion="0.107913665" vertical-offset="0" max-vertical-offset="973">
+        <state line="10" column="7" selection-start="460" selection-end="460" vertical-scroll-proportion="0.15416238" vertical-offset="0" max-vertical-offset="973">
           <folding>
             <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#center#0;n#body#0;n#!!top" expanded="true" />
