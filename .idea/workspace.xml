@@ -91,9 +91,10 @@
       <file leaf-file-name="paid.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/paid.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="143" selection-end="143" vertical-scroll-proportion="0.030832477" vertical-offset="0" max-vertical-offset="973">
+            <state line="7" column="7" selection-start="391" selection-end="391" vertical-scroll-proportion="0.107913665" vertical-offset="0" max-vertical-offset="973">
               <folding>
                 <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#center#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#center#0;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -717,9 +718,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/paid.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="143" selection-end="143" vertical-scroll-proportion="0.030832477" vertical-offset="0" max-vertical-offset="973">
+        <state line="7" column="7" selection-start="391" selection-end="391" vertical-scroll-proportion="0.107913665" vertical-offset="0" max-vertical-offset="973">
           <folding>
             <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#center#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#center#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
