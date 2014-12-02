@@ -7,6 +7,6 @@
     <br>Nog niet betaald maar  per ongeluk op deze pagina beland? Laat dit aan je vriend(in) weten door op <a href="{{ action('friend.setnotpaid', [$id]) }}">deze link te klikken</a>
         <br><br><br><br><br>
         <hr>
-        <a href="https://www.facebook.com/pages/Payminder/712891918796289">Facebook</a> | <a href="">Download app</a>
+        <a href="https://www.facebook.com/pages/Payminder/712891918796289">Facebook</a> | <a href="http://bit.ly/10ZNepH">Download app</a>
     </center>
 </body>
