@@ -71,7 +71,7 @@ class Friend extends \Eloquent {
                     $reknr = ". Het rekeningnummer is " . $payminder->sender_iban . "";
                 }
 
-                $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je morgen weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden automatisch herinneren?\nDownload Payminder: bit.ly/10ZNepH";
+                $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: http://api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je morgen weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden automatisch herinneren?\nDownload Payminder: bit.ly/10ZNepH";
 
                 $text = urlencode($message);
                 $to = $friend->number();
