@@ -36,10 +36,8 @@ class Friend extends \Eloquent {
 
     }
 
-    public static function sendsms($job, $data){
+    public static function sendsms($id){
         Log::info("sendsms call started");
-
-        Log::info(var_dump($data));
 
         $friend = Friend::find($id);
         $payminder = Payminder::find($friend->payminder_id);
@@ -94,7 +92,7 @@ class Friend extends \Eloquent {
                 }
 
                 $date = \Carbon\Carbon::now()->addMinutes(3);
-                Queue::later($date, 'SmsController@send', ['id' => $id]);
+                Queue::later($date, 'sendsms@send', ['id' => $id]);
 
                 Log::info("send sms for user: ".$friend->first_name);
             } else {

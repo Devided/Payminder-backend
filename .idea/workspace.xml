@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Friend.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
+      <file leaf-file-name="PaymindersController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="875" selection-end="875" vertical-scroll-proportion="0.33783785" vertical-offset="255" max-vertical-offset="1665">
+            <state line="56" column="55" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.6411398" vertical-offset="120" max-vertical-offset="1650">
               <folding />
             </state>
           </provider>
@@ -150,8 +150,8 @@
         <option value="$PROJECT_DIR$/app/events.php" />
         <option value="$PROJECT_DIR$/app/controllers/SmsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/FriendsController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/PaymindersController.php" />
         <option value="$PROJECT_DIR$/app/models/Friend.php" />
+        <option value="$PROJECT_DIR$/app/controllers/PaymindersController.php" />
       </list>
     </option>
   </component>
@@ -703,16 +703,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="69" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.5877115" vertical-offset="120" max-vertical-offset="1650">
+        <state line="87" column="30" selection-start="3100" selection-end="3100" vertical-scroll-proportion="0.7297297" vertical-offset="495" max-vertical-offset="1635">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="875" selection-end="875" vertical-scroll-proportion="0.33783785" vertical-offset="255" max-vertical-offset="1665">
+        <state line="56" column="55" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.6411398" vertical-offset="120" max-vertical-offset="1650">
           <folding />
         </state>
       </provider>
