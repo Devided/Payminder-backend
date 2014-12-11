@@ -8,7 +8,7 @@ class SmsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function send($id)
+	public static function send($id)
 	{
 		//
         Friend::sendsms($id);

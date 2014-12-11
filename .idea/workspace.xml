@@ -52,19 +52,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmsController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SmsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/SmsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="23" selection-start="192" selection-end="199" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="315">
+            <state line="15" column="1" selection-start="217" selection-end="217" vertical-scroll-proportion="0.20035619" vertical-offset="0" max-vertical-offset="1123">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Friend.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Friend.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="59" selection-start="3280" selection-end="3280" vertical-scroll-proportion="0.8054054" vertical-offset="471" max-vertical-offset="1605">
+            <state line="91" column="59" selection-start="3280" selection-end="3280" vertical-scroll-proportion="-37.25" vertical-offset="471" max-vertical-offset="1605">
               <folding />
             </state>
           </provider>
@@ -149,9 +149,9 @@
         <option value="$PROJECT_DIR$/app/views/notpaid.blade.php" />
         <option value="$PROJECT_DIR$/app/views/paid.blade.php" />
         <option value="$PROJECT_DIR$/app/events.php" />
-        <option value="$PROJECT_DIR$/app/controllers/SmsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/PaymindersController.php" />
         <option value="$PROJECT_DIR$/app/models/Friend.php" />
+        <option value="$PROJECT_DIR$/app/controllers/SmsController.php" />
       </list>
     </option>
   </component>
@@ -703,16 +703,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SmsController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="23" selection-start="192" selection-end="199" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="315">
+        <state line="91" column="59" selection-start="3280" selection-end="3280" vertical-scroll-proportion="-37.25" vertical-offset="471" max-vertical-offset="1605">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/SmsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="59" selection-start="3280" selection-end="3280" vertical-scroll-proportion="0.8054054" vertical-offset="471" max-vertical-offset="1605">
+        <state line="15" column="1" selection-start="217" selection-end="217" vertical-scroll-proportion="0.20035619" vertical-offset="0" max-vertical-offset="1123">
           <folding />
         </state>
       </provider>
