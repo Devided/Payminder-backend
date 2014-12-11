@@ -36,8 +36,11 @@ class Friend extends \Eloquent {
 
     }
 
-    public static function sendsms($job) use ($id){
+    public static function sendsms($job, $data){
         Log::info("sendsms call started");
+
+        Log::info(var_dump($data));
+
         $friend = Friend::find($id);
         $payminder = Payminder::find($friend->payminder_id);
         if(!$friend->paid){
