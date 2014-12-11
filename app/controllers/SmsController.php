@@ -11,6 +11,7 @@ class SmsController extends \BaseController {
 	public static function send($id)
 	{
 		//
+        Log::info("got id: ".$id);
         Friend::sendsms($id);
 	}
 }
