@@ -6,9 +6,3 @@
  * Time: 13:33
  */
 
-Event::listen('sendSMS', function($id){
-    Friend::sendsms($id);
-
-    $date = \Carbon\Carbon::now()->addHours(24);
-    Queue::later($date, 'sendSMS', [$id]);
-});

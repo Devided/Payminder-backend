@@ -88,6 +88,11 @@ class Friend extends \Eloquent {
                 } else {
                     //echo "send message failed";
                 }
+
+                $date = \Carbon\Carbon::now()->addHours(24);
+                Queue::later($date, 'SmsController@send', ['id' => $id]);
+
+                Log::info("send sms for user: ".$friend->first_name);
             } else {
                 //echo "Authentication failure: ". $ret[0];
             }

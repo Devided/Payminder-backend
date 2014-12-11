@@ -49,7 +49,8 @@ class PaymindersController extends \BaseController {
                 $friend->amount = $friendinput->amount;
                 $friend->save();
 
-                Event::fire('sendSMS', [$friend->id]);
+                //Event::fire('sendSMS', [$friend->id]);
+                Queue::push('SmsController@send', ['id' => $friend->id]);
             }
         } else {
             //echo "Authentication failure: ". $ret[0];
