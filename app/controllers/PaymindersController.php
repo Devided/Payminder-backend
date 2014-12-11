@@ -50,7 +50,12 @@ class PaymindersController extends \BaseController {
                 $friend->save();
 
                 //Event::fire('sendSMS', [$friend->id]);
-                Queue::push('Friend@sendsms', ['id' => $friend->id]);
+                //Queue::push('Friend@sendsms', ['id' => $friend->id]);
+                $id = $friend->id;
+                Queue::push(function($job) use ($id){
+                   Friend::sendsms($id);
+                });
+
                 Log::info('pushed to queue');
             }
         } else {
