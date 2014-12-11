@@ -82,7 +82,7 @@
       <file leaf-file-name="Friend.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="42" selection-start="829" selection-end="829" vertical-scroll-proportion="0.527027" vertical-offset="0" max-vertical-offset="1620">
+            <state line="38" column="50" selection-start="796" selection-end="796" vertical-scroll-proportion="0.36486486" vertical-offset="165" max-vertical-offset="1620">
               <folding />
             </state>
           </provider>
@@ -705,14 +705,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/PaymindersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="43" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.61442566" vertical-offset="90" max-vertical-offset="1650">
+        <state line="52" column="69" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.5877115" vertical-offset="120" max-vertical-offset="1650">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="42" selection-start="829" selection-end="829" vertical-scroll-proportion="0.527027" vertical-offset="0" max-vertical-offset="1620">
+        <state line="38" column="50" selection-start="796" selection-end="796" vertical-scroll-proportion="0.36486486" vertical-offset="165" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>
