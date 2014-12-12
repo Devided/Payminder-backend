@@ -92,7 +92,7 @@ class Friend extends \Eloquent {
                     //echo "send message failed";
                 }
 
-                $date = \Carbon\Carbon::now()->addHours(3);
+                $date = \Carbon\Carbon::now()->addHours(24);
                 //Queue::later($date, 'sendsms@send', ['id' => $id]);
 
                 Queue::later($date, function($job) use ($id){
