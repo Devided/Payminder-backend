@@ -41,11 +41,11 @@ class PaymindersController extends \BaseController {
             Queue::push(function($job) use ($id){
                Friend::sendsms($id);
             });
-             Log::info('pushed to queue');
+            Log::info('pushed to queue');
         }
 
 		return base64_encode($payminder->hash);
-
+    }
 
 	/**
 	 * Show the form for editing the specified resource.
