@@ -45,7 +45,7 @@ class Friend extends \Eloquent {
         if(!$friend->paid){
             // MASK: SEND PAYMINDERS
             $user = "payminder";
-            $password = "BEtYHsR1";
+            $password = "bHI7s2DG";
             $api_id = "3503724";
             $baseurl ="http://api.clickatell.com";
             // auth call
