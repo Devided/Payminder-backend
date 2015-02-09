@@ -99,9 +99,11 @@
       <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="59" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.6544969" vertical-offset="0" max-vertical-offset="1123">
+            <state line="54" column="87" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.7212823" vertical-offset="0" max-vertical-offset="1123">
               <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -774,9 +776,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="59" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.6544969" vertical-offset="0" max-vertical-offset="1123">
+        <state line="54" column="87" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.7212823" vertical-offset="0" max-vertical-offset="1123">
           <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
