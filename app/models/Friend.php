@@ -152,10 +152,10 @@ class Friend extends \Eloquent {
 
         WA::sendMessage($friend->number(), $msg1);
 
-        sleep(1);
-
         if($payminder->sender_iban != "" || $payminder->sender_iban != null)
         {
+            Log::info("Trying iban");
+            sleep(5);
             Log::info("found iban for: ".$friend->first_name);
             WA::sendMessage($friend->number(), $msg2);
         }
