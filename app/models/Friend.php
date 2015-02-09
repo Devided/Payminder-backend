@@ -151,7 +151,7 @@ class Friend extends \Eloquent {
         $msg2 = $payminder->sender_iban;
 
         WA::sendMessage($friend->number(), $msg1);
-        if($msg2 != "" || $msg2 != null)
+        if($payminder->sender_iban != "" || $payminder->sender_iban != null)
         {
             WA::sendMessage($friend->number(), $msg2);
         }
