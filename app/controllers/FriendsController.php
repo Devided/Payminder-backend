@@ -44,12 +44,15 @@ class FriendsController extends \BaseController {
         	stream_context_set_option( $context, 'ssl', 'local_cert', $cert );
         	$fp = stream_socket_client( $url, $err, $errstr, 60, STREAM_CLIENT_CONNECT, $context );
 
-        	$payload = json_encode( $body );
-        	$message = chr( 0 ) . pack( 'n', 32 ) . pack( 'H*', $deviceToken ) . pack( 'n', strlen($payload ) ) . $payload;
+            if($payminder->pushID != "none")
+            {
+            	$payload = json_encode( $body );
+            	$message = chr( 0 ) . pack( 'n', 32 ) . pack( 'H*', $deviceToken ) . pack( 'n', strlen($payload ) ) . $payload;
 
-        	fwrite( $fp, $message );
-        	fclose( $fp );
-
+            	fwrite( $fp, $message );
+            	fclose( $fp );
+            }
+            
 		    $friend->paid = true;
 		    $friend->save();
         }

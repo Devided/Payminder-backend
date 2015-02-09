@@ -85,11 +85,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FriendsController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FriendsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/FriendsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="47" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="1050">
-              <folding />
+            <state line="54" column="12" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.7212823" vertical-offset="0" max-vertical-offset="1170">
+              <folding>
+                <element signature="e#6#84#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,10 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Friend.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Friend.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="0" selection-start="5665" selection-end="5665" vertical-scroll-proportion="0.7162162" vertical-offset="1530" max-vertical-offset="2700">
+            <state line="155" column="0" selection-start="5665" selection-end="5665" vertical-scroll-proportion="-33.125" vertical-offset="1530" max-vertical-offset="2700">
               <folding />
             </state>
           </provider>
@@ -141,7 +143,6 @@
         <option value="$PROJECT_DIR$/app/views/paid.blade.php" />
         <option value="$PROJECT_DIR$/app/events.php" />
         <option value="$PROJECT_DIR$/app/controllers/SmsController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/FriendsController.php" />
         <option value="$PROJECT_DIR$/.env.local.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
@@ -150,6 +151,7 @@
         <option value="$PROJECT_DIR$/app/controllers/PaymindersController.php" />
         <option value="$PROJECT_DIR$/app/views/show.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Friend.php" />
+        <option value="$PROJECT_DIR$/app/controllers/FriendsController.php" />
       </list>
     </option>
   </component>
@@ -752,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/FriendsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="47" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="1050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="214" selection-start="1488" selection-end="1488" vertical-scroll-proportion="-31.25" vertical-offset="0" max-vertical-offset="1005">
@@ -768,8 +763,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="0" selection-start="5665" selection-end="5665" vertical-scroll-proportion="0.7162162" vertical-offset="1530" max-vertical-offset="2700">
+        <state line="155" column="0" selection-start="5665" selection-end="5665" vertical-scroll-proportion="-33.125" vertical-offset="1530" max-vertical-offset="2700">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/FriendsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="12" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.7212823" vertical-offset="0" max-vertical-offset="1170">
+          <folding>
+            <element signature="e#6#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
