@@ -52,7 +52,7 @@ class FriendsController extends \BaseController {
             	fwrite( $fp, $message );
             	fclose( $fp );
             }
-            
+
 		    $friend->paid = true;
 		    $friend->save();
         }
