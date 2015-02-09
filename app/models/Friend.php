@@ -36,7 +36,7 @@ class Friend extends \Eloquent {
 
     }
 
-    public static function sendsms($id){
+    public static function sendsmsold($id){
         Log::info("sendsms call started");
 
 
@@ -105,5 +105,46 @@ class Friend extends \Eloquent {
                 //echo "Authentication failure: ". $ret[0];
             }
         }
+    }
+
+    public static function sendsms($id)
+    {
+        Log::info("sendsms call started");
+
+        $friend = Friend::find($id);
+        $payminder = Payminder::find($friend->payminder_id);
+
+        $msg = "";
+        if($payminder->description == "" && $friend->amount == "0")
+        {
+            $msg = "";
+        } else if($payminder->description == "" && $friend->amount != "0")
+        {
+            $msg = " (" . $payminder->description . ")";
+        } else if($payminder->description != "" && $friend->amount == "0")
+        {
+            $msg = " (" . $friend->amount . " euro)";
+        } else {
+            $msg = " (" . $friend->amount . " euro, ".$payminder->description.")";
+        }
+
+        $reknr = "";
+        if($payminder->sender_iban != ""){
+            $reknr = ". Het rekeningnummer is " . $payminder->sender_iban . "";
+        }
+
+        $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: http://api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je morgen weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden automatisch herinneren?\nDownload Payminder: bit.ly/10ZNepH";
+
+        WA::sendMessage($friend->number(), $message);
+
+        $date = \Carbon\Carbon::now()->addHours(24);
+        //Queue::later($date, 'sendsms@send', ['id' => $id]);
+
+        Queue::later($date, function($job) use ($id){
+            Friend::sendsms($id);
+        });
+
+
+        Log::info("sent sms for user: ".$friend->first_name);
     }
 }

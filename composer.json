@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-        "iron-io/iron_mq": "1.5.*"
+        "iron-io/iron_mq": "1.5.*",
+        "mgp25/whatsapi": "dev-master",
+        "williamson/larawhatsapi": "dev-master"
 	},
 	"require-dev": {
 		"way/generators": "~2.0"
