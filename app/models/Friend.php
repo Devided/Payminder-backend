@@ -154,12 +154,13 @@ class Friend extends \Eloquent {
 
         if($payminder->sender_iban != "" || $payminder->sender_iban != null)
         {
-            Log::info("Trying iban");
-            sleep(5);
-            Log::info("found iban for: ".$friend->first_name);
-            WA::sendMessage($friend->number(), "test");
-        }
+            $nr = $friend->number();
+            $iban = $payminder->sender_iban;
 
+            Queue::push(function($job) use ($nr,$iban){
+                Friend::sendIBAN($nr,$iban);
+            });
+        }
 
         $date = \Carbon\Carbon::now()->addHours(24);
         //Queue::later($date, 'sendsms@send', ['id' => $id]);
@@ -170,5 +171,10 @@ class Friend extends \Eloquent {
 
 
         Log::info("sent sms for user: ".$friend->first_name);
+    }
+
+    public static function sendIBAN($nr,$iban)
+    {
+        WA::sendMessage($nr, $iban);
     }
 }
