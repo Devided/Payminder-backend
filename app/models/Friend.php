@@ -157,7 +157,7 @@ class Friend extends \Eloquent {
             Log::info("Trying iban");
             sleep(5);
             Log::info("found iban for: ".$friend->first_name);
-            WA::sendMessage($friend->number(), $msg2);
+            WA::sendMessage($friend->number(), "test");
         }
 
 
