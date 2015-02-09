@@ -135,7 +135,26 @@ class Friend extends \Eloquent {
 
         $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: http://api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je morgen weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden automatisch herinneren?\nDownload Payminder: bit.ly/10ZNepH";
 
-        WA::sendMessage($friend->number(), $message);
+        $description = "";
+        if($payminder->description != "" || $payminder->description != null)
+        {
+            $description = " (".$payminder->description.")";
+        }
+
+        $bedrag = "het bedrag";
+        if($friend->amount != "0")
+        {
+            $bedrag = "€".$friend->amount;
+        }
+
+        $msg1 = "Hi " . $friend->first_name . ", " . $payminder->sender_name . " krijgt geld van jou".$description.". \nAl terugbetaald? Klik hier: http://api.payminder.nl/c/" . $friend->id . "\nNog niet betaald? Maak dan ".$bedrag." over aan ".$payminder->sender_name;
+        $msg2 = $payminder->sender_iban;
+
+        WA::sendMessage($friend->number(), $msg1);
+        if($msg2 != "" || $msg2 != null)
+        {
+            WA::sendMessage($friend->number(), $msg2);
+        }
 
         $date = \Carbon\Carbon::now()->addHours(24);
         //Queue::later($date, 'sendsms@send', ['id' => $id]);

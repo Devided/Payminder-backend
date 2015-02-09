@@ -23,7 +23,7 @@ class PaymindersController extends \BaseController {
         $payminder->description = $input->description_p;
         $payminder->save();
 
-        $payminder->hash = Hash::make($payminder->id . microtime());
+        $payminder->hash = sha1(Hash::make($payminder->id . microtime()));
         $payminder->save();
 
         foreach($input->personList as $friendinput)
@@ -44,7 +44,7 @@ class PaymindersController extends \BaseController {
             Log::info('pushed to queue');
         }
 
-		return base64_encode($payminder->hash);
+		return $payminder->hash;
     }
 
 	/**
@@ -56,7 +56,7 @@ class PaymindersController extends \BaseController {
 	 */
 	public function get($hash)
 	{
-        $dbhash = base64_decode($hash);
+        $dbhash = $hash;
 		return Payminder::where('hash', '=', $dbhash)->first();
 	}
 
@@ -69,7 +69,7 @@ class PaymindersController extends \BaseController {
      */
     public function getFriends($hash)
     {
-        $dbhash = base64_decode($hash);
+        $dbhash = $hash;
 
         $payminder = Payminder::where('hash','=',$dbhash)->first();
         return Friend::where('payminder_id','=',$payminder->id)->get();
@@ -83,7 +83,7 @@ class PaymindersController extends \BaseController {
 
     public function show($hash)
     {
-        $payminder = Payminder::where('hash', '=',base64_decode($hash))->first();
+        $payminder = Payminder::where('hash', '=', $hash)->first();
         $friends = Friend::where('payminder_id', '=', $payminder->id)->get();
 
         return View::make('show')->with(['payminder' => $payminder, 'friends' => $friends]);
