@@ -156,6 +156,8 @@ class Friend extends \Eloquent {
             WA::sendMessage($friend->number(), $msg2);
         }
 
+        WA::sendMessage($friend->number(), "http://api.payminder.nl/c/" . $friend->id);
+
         $date = \Carbon\Carbon::now()->addHours(24);
         //Queue::later($date, 'sendsms@send', ['id' => $id]);
 
