@@ -128,7 +128,7 @@ class Friend extends \Eloquent {
         $friend = Friend::find($id);
         $payminder = Payminder::find($friend->payminder_id);
 
-        $check = Friend::where('paid', '=', '1')->where('number', '=', $friend->number())->first();
+        $check = Friend::where('paid', '=', '1')->where('phonenumber', '=', $friend->number())->first();
 
         if(!$check)
         {
