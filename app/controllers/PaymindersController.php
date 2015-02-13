@@ -32,7 +32,10 @@ class PaymindersController extends \BaseController {
             $friend->first_name = $friendinput->firstname;
             $friend->last_name = $friendinput->lastname;
             $friend->payminder_id = $payminder->id;
-            $friend->phonenumber = $friendinput->phone;
+
+            $nr = Friend::transformNumber($friendinput->phone);
+
+            $friend->phonenumber = $nr;
             $friend->amount = $friendinput->amount;
             $friend->save();
              //Event::fire('sendSMS', [$friend->id]);

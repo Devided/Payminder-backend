@@ -23,6 +23,22 @@ class Friend extends \Eloquent {
         return $number;
     }
 
+    public static function transformNumber($t)
+    {
+        $number = preg_replace('/[^0-9]+/', '', $t);
+
+        if($number[0] == "0" && $number[1] == "0")
+        {
+            $number = substr($number, 2);
+        } else if($number[0] == "0" && $number[1] == "6")
+        {
+            $number = substr($number, 1);
+            $number = "31" . $number;
+        }
+
+        return $number;
+    }
+
     public function paid()
     {
         if($this->paid == 1)
@@ -109,8 +125,25 @@ class Friend extends \Eloquent {
 
     public static function sendsms($id)
     {
+        $friend = Friend::find($id);
+        $payminder = Payminder::find($friend->payminder_id);
 
+        $check = Friend::where('paid', '=', '1')->where('number', '=', $friend->number())->first();
 
+        if(!$check)
+        {
+            // send firsttime message
+            $message = "Hai ".$friend->first_name.", leuk avondje gehad?! Payminder hier, de nieuwe betaal app. Voeg dit 06-nr toe aan je contacten, want ".$payminder->sender_name." wil jou een Payminder sturen (met linkje).";
+            WA::sendMessage($friend->number(), $message);
+        }
+
+        Queue::push(function($job) use ($id){
+            Friend::sendsms2($id);
+        });
+    }
+
+    public static function sendsms2($id)
+    {
         Log::info("sendsms call started");
 
         $friend = Friend::find($id);
@@ -175,7 +208,6 @@ class Friend extends \Eloquent {
         Queue::later($date, function($job) use ($id){
             Friend::sendsms($id);
         });
-
 
         Log::info("sent sms for user: ".$friend->first_name);
     }
