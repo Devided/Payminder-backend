@@ -215,6 +215,15 @@ class Friend extends \Eloquent {
     public static function sendIBAN($nr,$iban)
     {
         WA::sendMessage($nr, $iban);
+
+        Queue::push(function($job) use ($nr){
+            Friend::lastCall($nr);
+        });
+    }
+
+    public static function lastCall($nr)
+    {
+        WA::sendMessage($nr, 'Groeten, Bill Cashback\n\nPS: Lukt het nou echt niet; dan stuur ik je morgen weer een berichtje.. :)');
     }
 
 
