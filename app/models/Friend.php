@@ -178,7 +178,7 @@ class Friend extends \Eloquent {
         $description = "";
         if($payminder->description != "" || $payminder->description != null)
         {
-            $description = " (".$payminder->description.")";
+            $description = "Omschrijving: ".$payminder->description;
         }
 
         $bedrag = "het bedrag";
@@ -187,7 +187,7 @@ class Friend extends \Eloquent {
             $bedrag = "€".$friend->amount;
         }
 
-        $msg1 = "Hi " . $friend->first_name . ", " . $payminder->sender_name . " krijgt geld van jou".$description.". \nAl terugbetaald? Klik hier: http://api.payminder.nl/c/" . $friend->id . "\nNog niet betaald? Maak dan ".$bedrag." over aan ".$payminder->sender_name;
+        $msg1 = "Payminder: " . $payminder->sender_name . " heeft “the bill” betaald.\n".$description." \n\nAl betaald? Yes, Bill! Ik maak altijd meteen geld over. Klik hier:  http://api.payminder.nl/c/" . $friend->id . "\nZo niet. Zou je ".$bedrag." kunnen overmaken aan ".$payminder->sender_name."? Top!";
         $msg2 = $payminder->sender_iban;
 
         WA::sendMessage($friend->number(), $msg1);
