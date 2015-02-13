@@ -128,9 +128,9 @@ class Friend extends \Eloquent {
         $friend = Friend::find($id);
         $payminder = Payminder::find($friend->payminder_id);
 
-        $check = Friend::where('paid', '=', '1')->where('phonenumber', '=', $friend->number())->first();
+        $check = Friend::where('paid', '=', 1)->where('phonenumber', '=', $friend->number())->first();
 
-        if(!$check)
+        if($check->id == null || $check->first_name == '')
         {
             // send firsttime message
             $message = "Hai ".$friend->first_name.", leuk avondje gehad?! Payminder hier, de nieuwe betaal app. Voeg dit 06-nr toe aan je contacten, want ".$payminder->sender_name." wil jou een Payminder sturen (met linkje).";
