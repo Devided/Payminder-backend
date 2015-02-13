@@ -223,7 +223,8 @@ class Friend extends \Eloquent {
 
     public static function lastCall($nr)
     {
-        WA::sendMessage($nr, 'Groeten, Bill Cashback\n\nPS: Lukt het nou echt niet; dan stuur ik je morgen weer een berichtje.. :)');
+        $msg = "Groeten, Bill Cashback\n\nPS: Lukt het nou echt niet; dan stuur ik je morgen weer een berichtje.. :)";
+        WA::sendMessage($nr, $msg);
     }
 
 
