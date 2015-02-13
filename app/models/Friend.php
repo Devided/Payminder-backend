@@ -109,10 +109,17 @@ class Friend extends \Eloquent {
 
     public static function sendsms($id)
     {
+
+
         Log::info("sendsms call started");
 
         $friend = Friend::find($id);
         $payminder = Payminder::find($friend->payminder_id);
+
+        if($friend->paid)
+        {
+            return;
+        }
 
         $msg = "";
         if($payminder->description == "" && $friend->amount == "0")
@@ -177,4 +184,6 @@ class Friend extends \Eloquent {
     {
         WA::sendMessage($nr, $iban);
     }
+
+
 }
