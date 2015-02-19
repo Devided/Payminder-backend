@@ -139,7 +139,10 @@ class Friend extends \Eloquent {
         {
             // send firsttime message
             $message = "Hai ".$friend->first_name.", leuk avondje gehad?! Payminder hier, de nieuwe betaal app. Voeg dit 06-nr toe aan je contacten, want ".$payminder->sender_name." wil jou een Payminder sturen (met linkje).";
-            WA::sendMessage($friend->number(), $message);
+
+            $message_new = "Hai ".$friend->first_name.", Payminder hier, de nieuwe app, die dagelijks herinneringen stuurt. Voeg dit 06-nr toe aan je contacten, want ".$payminder->sender_name."  wil jou een Payminder sturen. Zo kan je met het ‘linkje' aangeven dat je betaald hebt. ";
+
+            WA::sendMessage($friend->number(), $message_new);
         }
 
         Queue::push(function($job) use ($id){
