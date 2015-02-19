@@ -178,7 +178,12 @@ class Friend extends \Eloquent {
 
         $reknr = "";
         if($payminder->sender_iban != ""){
-            $parsediban = substr_replace($payminder->sender_iban," ", 7, -strlen($payminder->sender_iban));
+            $parsediban = $payminder->sender_iban;
+
+            if($parsediban[0] == 'N' || $parsediban[0] == 'n')
+            {
+                $parsediban = substr_replace($payminder->sender_iban," ", 8, -strlen($payminder->sender_iban));
+            }
 
             $reknr = "(" . $parsediban . ")";
         }
