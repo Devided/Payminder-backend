@@ -107,7 +107,7 @@
       <file leaf-file-name="Friend.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="254" selection-start="7065" selection-end="7065" vertical-scroll-proportion="0.5387387" vertical-offset="2357" max-vertical-offset="3675">
+            <state line="182" column="38" selection-start="6160" selection-end="6160" vertical-scroll-proportion="0.33603603" vertical-offset="2357" max-vertical-offset="3735">
               <folding />
             </state>
           </provider>
@@ -736,7 +736,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Friend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="254" selection-start="7065" selection-end="7065" vertical-scroll-proportion="0.5387387" vertical-offset="2357" max-vertical-offset="3675">
+        <state line="182" column="38" selection-start="6160" selection-end="6160" vertical-scroll-proportion="0.33603603" vertical-offset="2357" max-vertical-offset="3735">
           <folding />
         </state>
       </provider>

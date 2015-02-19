@@ -178,7 +178,9 @@ class Friend extends \Eloquent {
 
         $reknr = "";
         if($payminder->sender_iban != ""){
-            $reknr = "(" . $payminder->sender_iban . ")";
+            $parsediban = substr_replace($payminder->sender_iban," ", 7, -strlen($payminder->sender_iban));
+
+            $reknr = "(" . $parsediban . ")";
         }
 
         $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: http://api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je morgen weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden automatisch herinneren?\nDownload Payminder: bit.ly/10ZNepH";
@@ -194,6 +196,8 @@ class Friend extends \Eloquent {
         {
             $bedrag = "Bedrag: €".$friend->amount;
         }
+
+
 
         $msg1 = "Payminder: " . $payminder->sender_name . " krijgt nog geld van jou.\n\n".$description.$bedrag." \n\nMaak het z.s.m. over ".$reknr."\nAls je betaald hebt, klik hier:  http://api.payminder.nl/c/" . $friend->id . "\n\nGroeten, Bill Cashback";
         $msg2 = $payminder->sender_iban;
