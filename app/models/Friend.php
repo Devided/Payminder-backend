@@ -178,7 +178,7 @@ class Friend extends \Eloquent {
 
         $reknr = "";
         if($payminder->sender_iban != ""){
-            $reknr = ". Het rekeningnummer is " . $payminder->sender_iban . "";
+            $reknr = "(" . $payminder->sender_iban . ")";
         }
 
         $message = "Beste " . $friend->first_name . ",\n\n" . $payminder->sender_name . " heeft geld voorgeschoten" . $msg . $reknr . ". Heb jij al betaald? Klik hier: http://api.payminder.nl/c/" . $friend->id . " \n\nNog geen tijd gehad? Geen probleem, ik stuur je morgen weer een berichtje.\n\nGroeten, Bill Cashback\n\nOok je vrienden automatisch herinneren?\nDownload Payminder: bit.ly/10ZNepH";
@@ -186,16 +186,16 @@ class Friend extends \Eloquent {
         $description = "";
         if($payminder->description != "" || $payminder->description != null)
         {
-            $description = "Omschrijving: ".$payminder->description;
+            $description = "Omschrijving: ".$payminder->description."\n";
         }
 
-        $bedrag = "het bedrag";
+        $bedrag = "";
         if($friend->amount != "0")
         {
-            $bedrag = "€".$friend->amount;
+            $bedrag = "Bedrag: €".$friend->amount;
         }
 
-        $msg1 = "Payminder: " . $payminder->sender_name . " heeft “the bill” betaald.\n".$description." \n\nAl betaald? Yes, Bill! Ik maak altijd meteen geld over. Klik hier:  http://api.payminder.nl/c/" . $friend->id . "\nZo niet. Zou je ".$bedrag." kunnen overmaken aan ".$payminder->sender_name."? Top!";
+        $msg1 = "Payminder: " . $payminder->sender_name . " krijgt nog geld van jou.\n\n".$description.$bedrag." \n\nMaak het z.s.m. over ".$reknr."\nAls je betaald hebt, klik hier:  http://api.payminder.nl/c/" . $friend->id . "\n\nGroeten, Bill Cashback";
         $msg2 = $payminder->sender_iban;
 
         WA::sendMessage($friend->number(), $msg1);
@@ -205,9 +205,9 @@ class Friend extends \Eloquent {
             $nr = $friend->number();
             $iban = $payminder->sender_iban;
 
-            Queue::push(function($job) use ($nr,$iban){
-                Friend::sendIBAN($nr,$iban);
-            });
+            //Queue::push(function($job) use ($nr,$iban){
+            //    Friend::sendIBAN($nr,$iban);
+            //});
         }
 
         $date = \Carbon\Carbon::now()->addHours(24);
@@ -224,9 +224,9 @@ class Friend extends \Eloquent {
     {
         WA::sendMessage($nr, $iban);
 
-        Queue::push(function($job) use ($nr){
-            Friend::lastCall($nr);
-        });
+        //Queue::push(function($job) use ($nr){
+        //    Friend::lastCall($nr);
+        //});
     }
 
     public static function lastCall($nr)
