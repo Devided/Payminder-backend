@@ -27,9 +27,9 @@ return array(
      */
     'accounts'         => array(
         'default'    => array('nickName' => 'Payminder',
-                              'number'   => '31627554558',
-                              'password' => 'UmyIJLWqbMtC256W5Nm0IqmAu6k=',
-                              'identity' => '%900%7e%07%af%0f%cc%f7%25%ee%eb%28%99%80%a5%86%8a%97%9d%8b'
+                              'number'   => '31629200257',
+                              'password' => 'Odns/OKOkg3oT9CzrKP47GhlIcc=',
+                              'identity' => '%3d%d6%a8%d0q%28%9a%22%23%b7%17x%91%222%05%d7%9c%11%21'
         )
     )
 );
