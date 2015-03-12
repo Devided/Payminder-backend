@@ -81,7 +81,7 @@ class SmsController extends \BaseController {
         }
 
         // huidige tijd - 7*24 uur is waar we in moeten zoeken
-        
+
         $query = time() - 7 * 24 * 60 * 60;
         $reminders = Reminder::where('number', '=', $number)->where('epoch', '>', $query)->orderBy('epoch', 'desc')->first();
 
@@ -90,6 +90,7 @@ class SmsController extends \BaseController {
         $paycheck->save();
 
         // delete reminder, so other reminders can be accepted aswell..
+
         $reminders->delete();
     }
 }

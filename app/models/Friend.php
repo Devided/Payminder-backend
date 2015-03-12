@@ -142,7 +142,7 @@ class Friend extends \Eloquent {
 
             $message_new = "Hai ".$friend->first_name.", Payminder hier, de nieuwe app, die dagelijks herinneringen stuurt. Voeg dit 06-nr toe aan je contacten, want ".$payminder->sender_name."  wil jou een Payminder sturen. Zo kan je met het ‘linkje' aangeven dat je betaald hebt. ";
 
-            WA::sendMessage($friend->number(), $message_new);
+            //WA::sendMessage($friend->number(), $message_new);
         }
 
         Queue::push(function($job) use ($id){
@@ -214,7 +214,7 @@ class Friend extends \Eloquent {
 
 
 
-        $msg1 = "Payminder: " . $payminder->sender_name . " krijgt nog geld van jou.\n\n".$description.$bedrag." \n\nMaak het z.s.m. over ".$reknr."\nAls je betaald hebt, klik hier:  http://api.payminder.nl/c/" . $friend->id . "\n\nGroeten, Bill Cashback";
+        $msg1 = "Payminder\n\n " . $payminder->sender_name . " krijgt nog geld van jou.\n\n".$description.$bedrag." \n\nMaak het bedrag over op het IBAN nr.\nAntwoord ‘ja’ als je betaald hebt.\n\nGroeten, Bill Cashback";
         $msg2 = $payminder->sender_iban;
 
         WA::sendMessage($friend->number(), $msg1);
@@ -224,9 +224,9 @@ class Friend extends \Eloquent {
             $nr = $friend->number();
             $iban = $payminder->sender_iban;
 
-            //Queue::push(function($job) use ($nr,$iban){
-            //    Friend::sendIBAN($nr,$iban);
-            //});
+            Queue::push(function($job) use ($nr,$iban){
+                Friend::sendIBAN($nr,$iban);
+            });
         }
 
         $date = \Carbon\Carbon::now()->addHours(7*24);
