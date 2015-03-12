@@ -128,7 +128,7 @@ class Friend extends \Eloquent {
         $friend = Friend::find($id);
         $payminder = Payminder::find($friend->payminder_id);
 
-	if($friend->paid)
+	    if($friend->paid)
         {
             return;
         }
@@ -152,6 +152,8 @@ class Friend extends \Eloquent {
 
     public static function sendsms2($id)
     {
+        // dit is de reminder
+
         Log::info("sendsms call started");
 
         $friend = Friend::find($id);
@@ -161,6 +163,14 @@ class Friend extends \Eloquent {
         {
             return;
         }
+
+        // save to reminders table
+        $rem = new Reminder();
+        $rem->friend_id = $friend->id;
+        $rem->number = $friend->number();
+        $rem->epoch = "" + time();
+
+        $rem->save();
 
         $msg = "";
         if($payminder->description == "" && $friend->amount == "0")
@@ -219,7 +229,7 @@ class Friend extends \Eloquent {
             //});
         }
 
-        $date = \Carbon\Carbon::now()->addHours(24);
+        $date = \Carbon\Carbon::now()->addHours(7*24);
         //Queue::later($date, 'sendsms@send', ['id' => $id]);
 
         Queue::later($date, function($job) use ($id){

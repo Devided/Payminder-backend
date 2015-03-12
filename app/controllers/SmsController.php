@@ -38,6 +38,16 @@ class SmsController extends \BaseController {
         $w->disconnect();
 
         unset($w);
+
+        // run this function again in 10sec
+
+        sleep(10);
+
+        Queue::push(function($job) {
+            SmsController::checkMessages();
+        });
+
+        return;
     }
 
     public static function recieveMessage($from, $body)
@@ -49,12 +59,12 @@ class SmsController extends \BaseController {
         $mes->number = $number;
         $mes->text = $body;
 
-        //todo: check message for 'ja' and set paid
+        //check message for 'ja'
 
-        $check = substr($body, 0, 5);
-        $check = strtolower($check);
+        $check = substr($body, 0, 5); // first 5 chars
+        $check = strtolower($check); // to lowercase
 
-        if(strpos($check, 'ja') !== FALSE)
+        if(strpos($check, 'ja') !== FALSE) // check if string contains 'ja'
         {
             $mes->detectedPaid = true;
         } else {
@@ -62,5 +72,24 @@ class SmsController extends \BaseController {
         }
 
         $mes->save();
+
+        // set paid if yes is detected
+
+        if(!$mes->detectedPaid)
+        {
+            return;
+        }
+
+        // huidige tijd - 7*24 uur is waar we in moeten zoeken
+        
+        $query = time() - 7 * 24 * 60 * 60;
+        $reminders = Reminder::where('number', '=', $number)->where('epoch', '>', $query)->orderBy('epoch', 'desc')->first();
+
+        $paycheck = Friend::find($reminders->friend_id);
+        $paycheck->paid = true;
+        $paycheck->save();
+
+        // delete reminder, so other reminders can be accepted aswell..
+        $reminders->delete();
     }
 }
