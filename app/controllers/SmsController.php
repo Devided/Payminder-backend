@@ -90,12 +90,18 @@ class SmsController extends \BaseController {
         }
 
         $paycheck = Friend::find($reminders->friend_id);
-        $paycheck->paid = true;
-        $paycheck->save();
+
+        FriendsController::setPaid($paycheck->id);
 
         // delete reminder, so other reminders can be accepted aswell..
-
         $reminders->delete();
+
+        // send the user a message
+
+        $id = $reminders->friend_id;
+        Queue::push(function($job) use ($id) {
+            Friend::sendPaidMessage($id);
+        });
 
         return;
     }

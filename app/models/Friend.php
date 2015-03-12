@@ -254,5 +254,21 @@ class Friend extends \Eloquent {
         WA::sendMessage($nr, $msg);
     }
 
+    public static function sendPaidMessage($id)
+    {
+        $friend = Friend::find($id);
+
+        if(!$friend)
+        {
+            return;
+        }
+
+        $msg1 = "Dank voor je betaling!";
+
+        WA::sendMessage($friend->number(), $msg1);
+
+        return;
+    }
+
 
 }

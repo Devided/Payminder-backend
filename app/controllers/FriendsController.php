@@ -8,7 +8,7 @@
 
 class FriendsController extends \BaseController {
 
-    public function setPaid($id)
+    public static function setPaid($id)
     {
         // mark friend as payed
         $friend = Friend::find($id);
