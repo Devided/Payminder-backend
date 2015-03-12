@@ -34,14 +34,13 @@ class SmsController extends \BaseController {
 
         // check for messages
         $w->pollMessage();
-
         $w->disconnect();
 
         unset($w);
 
         // run this function again in 10sec
 
-        sleep(10);
+        sleep(15);
 
         Queue::push(function($job) {
             SmsController::checkMessages();
@@ -85,6 +84,11 @@ class SmsController extends \BaseController {
         $query = time() - 7 * 24 * 60 * 60;
         $reminders = Reminder::where('number', '=', $number)->where('epoch', '>', $query)->orderBy('epoch', 'desc')->first();
 
+        if(!$reminders)
+        {
+            return;
+        }
+
         $paycheck = Friend::find($reminders->friend_id);
         $paycheck->paid = true;
         $paycheck->save();
@@ -92,5 +96,7 @@ class SmsController extends \BaseController {
         // delete reminder, so other reminders can be accepted aswell..
 
         $reminders->delete();
+
+        return;
     }
 }
